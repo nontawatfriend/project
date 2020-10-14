@@ -69,7 +69,7 @@
                 <li><a href="#">Drop Down 4</a></li>
               </ul>
             </li> --}}
-            <li><a href="{{ url ('contact') }}">Contact</a></li>
+            <li><a href="{{ url ('setmessage') }}">Set Message</a></li>
   
           </ul>
         </nav><!-- .nav-menu -->
@@ -191,9 +191,13 @@
   <script src="assets/vendor/venobox/venobox.min.js"></script>
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+
 
 </body>
 

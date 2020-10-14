@@ -17,8 +17,8 @@ Route::get('portfolio', function () {
 Route::get('team', function () {
     return view('team');
 });
-Route::get('contact', function () {
-    return view('contact');
+Route::get('setmessage', function () {
+    return view('setmessage');
 });
 Route::get('register', function () {
     return view('register');
@@ -28,7 +28,6 @@ Route::post('insert','App\Http\Controllers\MydbControllers@insert');
 
 Route::get('showall','App\Http\Controllers\MydbControllers@showalldata');
 
-Route::get('new', function () {
-    return view('new');
-});
-
+Route::get('delete/{id}','App\Http\Controllers\MydbControllers@delete');
+Route::get('edit/{id}','App\Http\Controllers\MydbControllers@edit');
+Route::post('update/{id}','App\Http\Controllers\MydbControllers@update');
