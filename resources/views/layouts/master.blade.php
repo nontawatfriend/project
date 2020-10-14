@@ -74,7 +74,7 @@
           </ul>
         </nav><!-- .nav-menu -->
   
-        <a href="#" class="get-started-btn scrollto">Get Started</a>
+        <a href="{{url ('showall')}}" class="get-started-btn scrollto">ShowMessage</a>
   
       </div>
     </header><!-- End Header -->

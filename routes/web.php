@@ -20,6 +20,15 @@ Route::get('team', function () {
 Route::get('contact', function () {
     return view('contact');
 });
+Route::get('register', function () {
+    return view('register');
+});
 
+Route::post('insert','App\Http\Controllers\MydbControllers@insert');
 
+Route::get('showall','App\Http\Controllers\MydbControllers@showalldata');
+
+Route::get('new', function () {
+    return view('new');
+});
 

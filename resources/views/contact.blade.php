@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title','about')
+@section('title','contact')
 @section('content')
 
 <!-- ======= Contact Section ======= -->
@@ -39,7 +39,8 @@
         </div>
 
         <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <form action="{{url ('insert')}}" method="post" role="form" class="php-email-form">
+            <input type="hidden" name="_token" value="{{csrf_token()}}">
             <div class="row">
               <div class="form-group col-md-6">
                 <label for="name">Your Name</label>
@@ -47,30 +48,35 @@
                 <div class="validate"></div>
               </div>
               <div class="form-group col-md-6">
-                <label for="name">Your Email</label>
+                <label for="email">Your Email</label>
                 <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
                 <div class="validate"></div>
               </div>
             </div>
             <div class="form-group">
-              <label for="name">Subject</label>
+              <label for="subject">Subject</label>
               <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
               <div class="validate"></div>
             </div>
             <div class="form-group">
-              <label for="name">Message</label>
+              <label for="message">Message</label>
               <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
               <div class="validate"></div>
             </div>
+
             <div class="mb-3">
               <div class="loading">Loading</div>
-              <div class="error-message"></div>
+              {{-- <div class="error-message"></div> --}}
               <div class="sent-message">Your message has been sent. Thank you!</div>
             </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
+
+
+            <div class="text-center"> <button type="submit" onclick="window.location;" >Send Message</button></div>
+
+            
+            
           </form>
         </div>
-
       </div>
 
     </div>
